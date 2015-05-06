@@ -15,7 +15,7 @@ describe('Animals',function(){
     describe('Finding a specific animal',function(){
         it('should return a single animal in the collection when given a parameter',inject(function(Animals){
             var animal=Animals.find('silverback_gorilla');
-            animal.should.exist();
+            should.exist(animal);
         }));
 
         it('should return undefined if no animal is found',inject(function(Animals){

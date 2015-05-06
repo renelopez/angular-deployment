@@ -9,15 +9,13 @@ angular.module('packt')
             return ANIMALS_COLLECTION;
         };
 
-        Animals.find=function(animalId){
-            var i,animalslength=ANIMALS_COLLECTION.length,animal;
-
-          for(i=0;i<animalslength;i++){
-              animal=ANIMALS_COLLECTION[i];
-              if(animal.id===animalId){
-                  return animal;
-              }
-          }
+        Animals.find = function (id) {
+            for (var i = 0; i < ANIMALS_COLLECTION.length; i++) {
+                var animal = ANIMALS_COLLECTION[i];
+                if (animal.id === id) {
+                    return animal;
+                }
+            }
             return undefined;
         }
     });
